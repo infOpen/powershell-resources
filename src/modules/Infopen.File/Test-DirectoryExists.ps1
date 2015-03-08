@@ -10,7 +10,7 @@ Set-StrictMode -Version Latest
 .EXAMPLE
     Test-DirectoryExists -Path "C:\foo.bar"
 
-.PARAMETER file
+.PARAMETER path
     Directory path
 #>
 

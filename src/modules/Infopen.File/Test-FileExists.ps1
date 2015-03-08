@@ -10,7 +10,7 @@ Set-StrictMode -Version Latest
 .EXAMPLE
     Test-FileExists -Path "C:\foo.bar"
 
-.PARAMETER file
+.PARAMETER path
     File path
 #>
 
