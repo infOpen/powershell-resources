@@ -49,6 +49,14 @@ Describe 'Infopen.File' {
             $checkCmd | Should Be $func
         }
 
+        It 'should export Test-DirectoryExists' {
+            $func = 'Test-DirectoryExists'
+            $checkCmd = ($commands | Where-Object {
+                $_.Name -eq $func -and $_.Source -eq $modName
+            })
+            $checkCmd | Should Be $func
+        }
+
     }
 
     It 'should be removed' {

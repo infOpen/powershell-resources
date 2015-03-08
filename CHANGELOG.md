@@ -3,6 +3,7 @@
 ## 2015-03-08 :
 - Initialize Infopen.File
     - Test-FileExists
+    - Test-DirectoryExists
 
 
 - Initialize Infopen.Module
