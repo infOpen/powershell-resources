@@ -1,0 +1,18 @@
+TOPIC
+    about_Infopen.File
+
+SHORT DESCRIPTION
+    This module contains functions to manage files.
+
+LONG DESCRIPTION
+    This module contains high level function to be used in scripts.
+    Functions are in separeted files, documented and with a 100% code coverage.
+
+EXAMPLES
+    Load module :
+        Import-Module Infopen.File
+
+    Test if a file exists :
+        Test-FileExists -path "c:\foo.txt"
+
+SEE ALSO
