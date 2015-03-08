@@ -1,6 +1,10 @@
 # CHANGELOG
 
 ## 2015-03-08 :
+- Initialize Infopen.Error
+    - New-ObjectNotFoundException
+
+
 - Initialize Infopen.File
     - Test-FileExists
     - Test-DirectoryExists

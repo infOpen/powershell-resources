@@ -11,10 +11,12 @@ From the beginning, the rules are :
 ## Modules
 
 Actually, it's small, but we have initialize these modules :
+### Infopen.Error
+This module contains high level functions to manage errors
 ### Infopen.File
 This module contains high level functions to manage files and folders
 ### Infopen.Module
-This module contains high level functions to manage files and folders
+This module contains high level functions to manage modules
 
 ## Unit testing
 

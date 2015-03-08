@@ -1,0 +1,20 @@
+TOPIC
+    about_Infopen.Error
+
+SHORT DESCRIPTION
+    This module contains functions to manage errors.
+
+LONG DESCRIPTION
+    This module contains high level function to be used in scripts.
+    Functions are in separeted files, documented and with a 100% code coverage.
+
+EXAMPLES
+    Load module :
+        Import-Module Infopen.Error
+
+    Create a new ObjectNotFound error :
+        New-ObjectNotFoundException `
+            -Message 'File not found' `
+            -SourceObject $path
+
+SEE ALSO
