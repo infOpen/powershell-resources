@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2015-03-09 :
+- Infopen.Error
+    - Add New-InvalidDataException
+
 ## 2015-03-08 :
 - Initialize Infopen.Error
     - New-ObjectNotFoundException
