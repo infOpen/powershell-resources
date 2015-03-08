@@ -10,6 +10,10 @@
     - Test-DirectoryExists
 
 
+- Initialize Infopen.JSON
+    - Import-FromJsonFile
+
+
 - Initialize Infopen.Module
     - Test-ModuleAvailable
     - Test-ModuleLoaded

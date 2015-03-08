@@ -15,6 +15,8 @@ Actually, it's small, but we have initialize these modules :
 This module contains high level functions to manage errors
 ### Infopen.File
 This module contains high level functions to manage files and folders
+### Infopen.JSON
+This module contains high level functions to manage JSON data
 ### Infopen.Module
 This module contains high level functions to manage modules
 
