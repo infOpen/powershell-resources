@@ -5,16 +5,17 @@ $modulePath = $MyInvocation.MyCommand.Path `
     -replace 'tests\\modules\\(.*?)\.Test\\(.*?)\.Tests\.ps1', `
         'src\modules'
 
+<# Set name of module currently testing #>
+$moduleName = 'Infopen.Global'
+
 <# Remove module if already loaded #>
-if (Get-Module Infopen.Global)
+if (Get-Module $moduleName)
 {
-    Remove-Module Infopen.Global
+    Remove-Module $moduleName
 }
 
-$modName = 'Infopen.Global'
-
 <# Tests #>
-Describe 'Infopen.Global' {
+Describe $moduleName {
 
     BeforeEach {
         <# Backup $env:PSModulePath value #>
@@ -28,39 +29,39 @@ Describe 'Infopen.Global' {
     }
 
     It 'should be loaded' {
-        Import-Module Infopen.Global
+        Import-Module $moduleName
     }
 
     Context 'Outside tests' {
 
         <# Get exported commands for this module #>
-        $commands = Get-Command -Module Infopen.Global
+        $commands = Get-Command -Module $moduleName
 
         BeforeEach {
             $checkCmd = $null
-            $func = $null
+            $functionName = $null
         }
 
         It 'should export Test-ModuleAvailable' {
-            $func = 'Test-ModuleAvailable'
+            $functionName = 'Test-ModuleAvailable'
             $checkCmd = ($commands | Where-Object {
-                $_.Name -eq $func -and $_.Source -eq $modName
+                $_.Name -eq $functionName -and $_.Source -eq $moduleName
             })
-            $checkCmd | Should Be $func
+            $checkCmd | Should Be $functionName
         }
 
         It 'should export Test-ModuleLoaded' {
-            $func = 'Test-ModuleLoaded'
+            $functionName = 'Test-ModuleLoaded'
             $checkCmd = ($commands | Where-Object {
-                $_.Name -eq $func -and $_.Source -eq $modName
+                $_.Name -eq $functionName -and $_.Source -eq $moduleName
             })
-            $checkCmd | Should Be $func
+            $checkCmd | Should Be $functionName
         }
     }
 
     It 'should be removed' {
-        if (-not(Remove-Module Infopen.Global)) {
-            Import-Module Infopen.Global
+        if (-not(Remove-Module $moduleName)) {
+            Import-Module $moduleName
         }
     }
 }
