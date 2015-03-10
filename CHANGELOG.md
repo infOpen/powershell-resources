@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2015-03-10 :
+- Infopen.Global
+    - Add Get-StringifiedObjectKeys
+
 ## 2015-03-09 :
 - Infopen.Error
     - Add New-InvalidDataException

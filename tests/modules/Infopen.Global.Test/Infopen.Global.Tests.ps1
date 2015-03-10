@@ -57,6 +57,14 @@ Describe $moduleName {
             })
             $checkCmd | Should Be $functionName
         }
+
+        It 'should export Get-StringifiedObjectKeys' {
+            $functionName = 'Get-StringifiedObjectKeys'
+            $checkCmd = ($commands | Where-Object {
+                $_.Name -eq $functionName -and $_.Source -eq $moduleName
+            })
+            $checkCmd | Should Be $functionName
+        }
     }
 
     It 'should be removed' {
