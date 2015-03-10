@@ -89,6 +89,14 @@ Describe $moduleName {
             })
             $checkCmd | Should Be $functionName
         }
+
+        It 'should export Test-ConfigObject' {
+            $functionName = 'Test-ConfigObjec'
+            $checkCmd = ($commands | Where-Object {
+                $_.Name -eq $functionName -and $_.Source -eq $moduleName
+            })
+            $checkCmd | Should Be $functionName
+        }
     }
 
     It 'should be removed' {

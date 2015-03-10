@@ -1,10 +1,15 @@
 # CHANGELOG
 
+## 2015-03-11 :
+- Infopen.Global
+    - Test-ConfigObject
+
 ## 2015-03-10 :
 - Infopen.Global
     - Add Get-StringifiedObjectKeys
     - Test-ArrayExtraContent
     - Test-ArrayMissingContent
+    - Test-ConfigObject
 
 ## 2015-03-09 :
 - Infopen.Error
