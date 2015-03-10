@@ -65,6 +65,22 @@ Describe $moduleName {
             })
             $checkCmd | Should Be $functionName
         }
+
+        It 'should export Test-ArrayExtraContent' {
+            $functionName = 'Test-ArrayExtraContent'
+            $checkCmd = ($commands | Where-Object {
+                $_.Name -eq $functionName -and $_.Source -eq $moduleName
+            })
+            $checkCmd | Should Be $functionName
+        }
+
+        It 'should export Test-ArrayMissingContent' {
+            $functionName = 'Test-ArrayMissingContent'
+            $checkCmd = ($commands | Where-Object {
+                $_.Name -eq $functionName -and $_.Source -eq $moduleName
+            })
+            $checkCmd | Should Be $functionName
+        }
     }
 
     It 'should be removed' {

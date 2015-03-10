@@ -2,7 +2,7 @@ TOPIC
     about_Infopen.Global
 
 SHORT DESCRIPTION
-    This module contains functions about modules.
+    This module contains functions about modules and function not classified.
 
 LONG DESCRIPTION
     This module contains high level function to be used in scripts.
