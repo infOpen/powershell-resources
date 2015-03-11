@@ -91,7 +91,7 @@ Describe $moduleName {
         }
 
         It 'should export Test-ConfigObject' {
-            $functionName = 'Test-ConfigObjec'
+            $functionName = 'Test-ConfigObject'
             $checkCmd = ($commands | Where-Object {
                 $_.Name -eq $functionName -and $_.Source -eq $moduleName
             })
