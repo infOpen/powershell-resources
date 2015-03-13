@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2015-03-13 :
+- Infopen.Script : New-FileBackup
+    - Add functions to manage config
+
 ## 2015-03-11 :
 - Infopen.Global
     - Test-ConfigObject

@@ -50,12 +50,50 @@ function Test-TopLevelConfig()
                         -mandatoryKeys $mdtyTopLevelKeys `
                         -validKeys $validTopLevelKeys
 
-    if ($errors)
+    <# If keys are ok, check values type #>
+    if (-not $errors)
     {
-        throw errors
+
+        <# Check Name value #>
+        if (-not $configObject.Name -is [String] -or $configObject.Name -eq '')
+        {
+            $errorObject = New-InvalidDataException `
+                -Message 'Bad value for Name key' `
+                -SourceObject $configObject.Name
+            $errors += $errorObject
+        }
+
+        <# Check Sources value #>
+        if (-not $configObject.Sources -is [System.Object[]] `
+             -and $configObject.Sources.Length -ne 0)
+        {
+            $errorObject = New-InvalidDataException `
+                -Message 'Bad value for Sources key' `
+                -SourceObject $configObject.Sources
+            $errors += $errorObject
+        }
+
+        <# Check Destination value #>
+        if (-not $configObject.Destination -is [Hashtable])
+        {
+            $errorObject = New-InvalidDataException `
+                -Message 'Bad value for Destination key' `
+                -SourceObject $configObject.Destination
+            $errors += $errorObject
+        }
+
+        <# Recheck errors before return #>
+        if (-not $errors)
+        {
+            return $true
+        }
+        else
+        {
+            throw $errors
+        }
     }
     else
     {
-        return $true
+        throw errors
     }
 }

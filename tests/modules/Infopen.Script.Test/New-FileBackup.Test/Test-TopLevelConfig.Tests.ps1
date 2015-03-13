@@ -64,7 +64,7 @@ Describe 'Test-TopLevelConfig' {
         $configKeys = @{
             Name = 'foo';
             Sources = @();
-            Destination = @()
+            Destination = @{}
         }
 
         Test-TopLevelConfig -configObject $configKeys | Should Be $true
